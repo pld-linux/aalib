@@ -10,7 +10,7 @@ Source:      ftp://ftp.ta.jcu.cz/pub/aa/%{name}-%{version}.tar.gz
 Patch0:      aalib-xref.patch
 Patch1:      aalib-info.patch
 URL:         http://horac.ta.jcu.cz/aa/aalib/
-Buildroot:   /tmp/%{name}-%{version}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 AA-lib is a low level gfx library just as many other libraries are.
