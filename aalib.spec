@@ -1,7 +1,7 @@
 Summary:   An ASCII art GFX library
 Name:      aalib
 Version:   1.2
-Release:   5
+Release:   6
 Copyright: LGPL
 Group:     Libraries
 Source:    ftp://ftp.ta.jcu.cz/pub/aa/%{name}-%{version}.tar.gz
@@ -29,15 +29,14 @@ The header files for development of programs using the AAlib.
 %package   static
 Summary:   Static aalib library
 Group:     Libraries
-Requires:  aalib = %{version}
-Prereq:    /sbin/install-info
+Requires:  %{name}-devel = %{version}
 
 %description static
 Static aalib library.
 
 %package   progs
 Summary:   AA-lib tools
-Requires:  aalib = %{version}
+Requires:  %{name} = %{version}
 Group:     Utilities/Terminal
 
 %description progs
@@ -86,6 +85,12 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755, root, root) /usr/bin/*
 
 %changelog
+* Fri Aug 28 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [1.2-5]
+- corected dependences in static "Requires: %%{name}-devel = %%{version}",
+- removed "Prereq: /sbin/install-info" from static,
+- aalib is now builded against libslang.so.1.
+
 * Thu Jun 18 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [1.2-5]
 - recompiled on system without ncurses (only slang).
