@@ -3,7 +3,7 @@ Summary(fr):	Bibliothèque AA (Ascii Art)
 Summary(pl):	Biblioteka graficzna ASCII Art
 Name:		aalib
 Version:	1.4rc5
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Libraries
 Group(de):	Libraries
@@ -53,6 +53,9 @@ Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 Requires:	%{name} = %{version}
+Requires:	slang-devel
+Requires:	gpm-devel
+Requires:	XFree86-devel
 
 %description devel
 The header files for development of programs using the AAlib.
