@@ -9,9 +9,9 @@ Group:		Libraries
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 Source0:	ftp://ftp.ta.jcu.cz/pub/aa/%{name}-%{version}.tar.gz
-Patch0:		aalib-xref.patch
-Patch1:		aalib-info.patch
-Patch2:		aalib-autoconf.patch
+Patch0:		%{name}-xref.patch
+Patch1:		%{name}-info.patch
+Patch2:		%{name}-autoconf.patch
 URL:		http://horac.ta.jcu.cz/aa/aalib/
 BuildRequires:	gpm-devel
 BuildRequires:	slang-devel
