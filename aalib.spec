@@ -118,7 +118,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(644,root,root) %{_libdir}/lib*.a
 
 %files progs
-%attr(755,root,root) /usr/bin/*
+%attr(755,root,root) %{_bindir}/*
 
 %changelog
 * Mon Apr  5 1999 Piotr Czerwiñski <pius@pld.org.pl>
