@@ -87,18 +87,18 @@ make install prefix=$RPM_BUILD_ROOT/usr
 
 strip $RPM_BUILD_ROOT/usr/{bin/*,lib/lib*.so.*.*}
 
-gzip -9nf $RPM_BUILD_ROOT/usr/info/*.info \
+gzip -9nf $RPM_BUILD_ROOT%{_infodir}/*.info \
 	README NEWS AUTHORS ANNOUNCE ChangeLog
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %post devel
-/sbin/install-info /usr/info/aalib.info.gz /etc/info-dir
+/sbin/install-info %{_infodir}/aalib.info.gz /etc/info-dir
 
 %preun devel
 if [ "$1" = "0" ]; then
-	/sbin/install-info --delete /usr/info/aalib.info.gz /etc/info-dir
+	/sbin/install-info --delete %{_infodir}/aalib.info.gz /etc/info-dir
 fi
 
 %clean
@@ -112,7 +112,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc {README,NEWS,AUTHORS,ANNOUNCE,ChangeLog}.gz
 /usr/include/*.h
 /usr/lib/lib*.so
-/usr/info/*.info.gz
+%{_infodir}/*.info.gz
 
 %files static
 %attr(644,root,root) /usr/lib/lib*.a
