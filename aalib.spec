@@ -1,9 +1,11 @@
 Summary:	An ASCII art GFX library
 Summary(fr):	Bibliothèque AA (Ascii Art)
+Summary(es): Biblioteca ASCII art
 Summary(pl):	Biblioteka graficzna ASCII Art
+Summary(pt_BR): Uma biblioteca para ASCII art
 Name:		aalib
 Version:	1.4rc5
-Release:	3
+Release:	4
 License:	LGPL
 Group:		Libraries
 Group(de):	Libraries
@@ -33,6 +35,9 @@ linux boots with a nice penguin logo at secondary display (yes! Like
 Win95 does:) AA-lib API is designed to be similar to other graphics
 libraries. Learning a new API would be a piece of cake!
 
+%description -l es
+Biblioteca ASCII art.
+
 %description -l fr
 La bibliothèque AA est nécessaire pour GIMP. Elle offre la possibilité
 de travailler dans des contextes graphiques sans affichage.
@@ -46,6 +51,9 @@ wysoko wydajnym narzêdziem do renderowania ascii-art. Teraz mój Linux
 startuje z ³adnym logo pingwina na drugim monitorze. AA-lib API jest
 zaprojektowane tak by byæ podobnym do innych graficznych bibliotek.
 Nauka nowego API bêdzie bu³k± z mas³em!
+
+%description -l pt_BR
+Uma biblioteca para trabalhar com ASCII art.
 
 %package devel
 Summary:	Header files libraries for aalib
