@@ -173,7 +173,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/aalib-config
 %{_mandir}/man1/aalib-config.1*
 %attr(755,root,root) %{_libdir}/lib*.so
-%attr(755,root,root) %{_libdir}/lib*.la
+%{_libdir}/lib*.la
 %{_includedir}/*.h
 %{_infodir}/*.info*
 %{_mandir}/man3/*
