@@ -110,7 +110,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %doc {README,NEWS,AUTHORS,ANNOUNCE,ChangeLog}.gz
-/usr/include/*.h
+%{_includedir}/*.h
 %{_libdir}/lib*.so
 %{_infodir}/*.info.gz
 
