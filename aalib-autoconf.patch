@@ -1,0 +1,12 @@
+diff -Nru aalib-1.2/aclocal.m4 aalib-1.2.new/aclocal.m4
+--- aalib-1.2/aclocal.m4	Tue Nov 11 21:17:00 1997
++++ aalib-1.2.new/aclocal.m4	Thu Jul  1 02:18:25 1999
+@@ -10,7 +10,7 @@
+ dnl AM_INIT_AUTOMAKE(package,version, [no-define])
+ 
+ AC_DEFUN(AM_INIT_AUTOMAKE,
+-[AC_REQUIRE([AM_PROG_INSTALL])
++[AC_REQUIRE([AC_PROG_INSTALL])
+ PACKAGE=[$1]
+ AC_SUBST(PACKAGE)
+ VERSION=[$2]
