@@ -7,7 +7,7 @@ Summary(ru):	Библиотека консольной графики (ASCII Art)
 Summary(uk):	Б╕бл╕отека консольно╖ граф╕ки (ASCII Art)
 Name:		aalib
 Version:	1.4rc5
-Release:	7
+Release:	8
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/aa-project/%{name}-%{version}.tar.gz
