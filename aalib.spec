@@ -7,11 +7,13 @@ Summary(ru):	Библиотека консольной графики (ASCII Art)
 Summary(uk):	Б╕бл╕отека консольно╖ граф╕ки (ASCII Art)
 Name:		aalib
 Version:	1.4rc5
-Release:	5
+Release:	6
 License:	LGPL
 Group:		Libraries
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/aa-project/%{name}-%{version}.tar.gz
+Source1:	%{name}-config.1
 Patch0:		%{name}-info.patch
+Patch1:		%{name}-debian_man.patch
 URL:		http://aa-project.sourceforge.net/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
@@ -130,6 +132,7 @@ NarzЙdzia AA-lib.
 %prep
 %setup -q -n %{name}-1.4.0
 %patch0 -p1
+%patch1 -p1
 
 %build
 libtoolize --copy --force
@@ -144,6 +147,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install -d $RPM_BUILD_ROOT%{_mandir}/man1
+install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1/aalib-config.1
 
 gzip -9nf README NEWS AUTHORS ANNOUNCE ChangeLog
 
@@ -167,6 +173,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/aalib-config
+%{_mandir}/man1/aalib-config.1*
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
 %{_includedir}/*.h
