@@ -65,7 +65,6 @@ AA-lib - це низькор╕внева граф╕чна б╕бл╕отека. Головна в╕дм╕нн╕сть ╖╖
 пристрою. Насправд╕, граф╕чний (в звичному розум╕нн╕ цього слова)
 вив╕д ╕ неможливий. AA-lib перетворю╓ граф╕ку в так званий ASCII-Art.
 
-
 %package devel
 Summary:	Header files and libraries for aalib
 Summary(pl):	Pliki nagЁСwkowe dla aalib
@@ -135,8 +134,9 @@ NarzЙdzia AA-lib.
 %patch1 -p1
 
 %build
+rm -f missing
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
