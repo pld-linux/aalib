@@ -2,14 +2,18 @@ Summary:	An ASCII art GFX library
 Summary(pl):	Biblioteka GFX sztuki w ASCII
 Name:		aalib
 Version:	1.2
-Release:	8
+Release:	9
 Copyright:	LGPL
 Group:		Libraries
 Group(pl):	Biblioteki
 Source:		ftp://ftp.ta.jcu.cz/pub/aa/%{name}-%{version}.tar.gz
 Patch0:		aalib-xref.patch
 Patch1:		aalib-info.patch
+Patch2:		aalib-autoconf.patch
 URL:		http://horac.ta.jcu.cz/aa/aalib/
+BuildPrereq:	gpm-devel
+BuildPrereq:	slang-devel
+BuildPrereq:	XFree86-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -31,12 +35,12 @@ AA-lib API jest zaprojektowane tak by byæ podobnym do innych graficznych
 bibliotek. Nauka nowego API bêdzie bu³k± z mas³em!
 
 %package devel
-Summary:     Header files libraries for aalib
-Summary(pl): Pliki nag³ówkowe dla aalib
-Group:       Libraries
-Group(pl):   Biblioteki
-Requires:    %{name} = %{version}
-Prereq:      /sbin/install-info
+Summary:	Header files libraries for aalib
+Summary(pl):	Pliki nag³ówkowe dla aalib
+Group:		Libraries
+Group(pl):	Biblioteki
+Requires:	%{name} = %{version}
+Prereq:		/sbin/install-info
 
 %description devel
 The header files for development of programs using the AAlib.
@@ -45,11 +49,11 @@ The header files for development of programs using the AAlib.
 Pliki nag³ówkowe do pisania programów u¿ywaj±cych AAlib.
 
 %package static
-Summary:     Static aalib library
-Summary(pl): Statyczna biblioteka aalib
-Group:       Libraries
-Group(pl):   Biblioteki
-Requires:    %{name}-devel = %{version}
+Summary:	Static aalib library
+Summary(pl):	Statyczna biblioteka aalib
+Group:		Libraries
+Group(pl):	Biblioteki
+Requires:	%{name}-devel = %{version}
 
 %description static
 Static aalib library.
@@ -74,21 +78,20 @@ Narzêdzia AA-lib.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" \
+LDFLAGS="-s"; export LDFLAGS
+automake
+autoconf
 %configure
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install prefix=$RPM_BUILD_ROOT/%{_prefix} \
-	bindir=$RPM_BUILD_ROOT/%{_bindir} \
-	libdir=$RPM_BUILD_ROOT/%{_libdir} \
-	infodir=$RPM_BUILD_ROOT/%{_infodir} \
-	includedir=$RPM_BUILD_ROOT/%{_includedir}
+make install DESTDIR=$RPM_BUILD_ROOT
 
-strip $RPM_BUILD_ROOT/usr/{bin/*,lib/lib*.so.*.*}
+strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
 gzip -9nf $RPM_BUILD_ROOT%{_infodir}/*.info \
 	README NEWS AUTHORS ANNOUNCE ChangeLog
@@ -124,63 +127,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 
 %changelog
-* Mon Jun 07 1999 Jan Rêkorajski <baggins@pld.org.pl>
-  [1.2-8]
-- spec cleanup
-
-* Mon Apr  5 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [1.2-7]
-- added Group(pl),
-- fixed info entry (aalib-info.patch), 
-- fixed @xref definitions in aalib.texinfo (aalib-xref.patch),
-- standarized {un}registering info pages,
-- added gzipping documentation,
-- added ChangeLog to %doc,
-- cosmetic changes for common l&f.
-
-* Sat Sep 26 1998 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
-  [1.2-6]
-- added pl translation.
-
-* Fri Aug 28 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.2-5]
-- corected dependences in static "Requires: %%{name}-devel = %%{version}",
-- removed "Prereq: /sbin/install-info" from static,
-- aalib is now builded against libslang.so.1.
-
-* Thu Jun 18 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.2-5]
-- recompiled on system without ncurses (only slang).
-- added static subpackage,
-- all %doc moved to devel.
-
-* Mon Jun  1 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.2-4]
-- added -q %setup parameter,
-- built against ncurses 4.2 (for RH 5.1).
-
-* Wed May  6 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.2-3]
-- %%{version} macro instead %%{PACKAGE_VERSION},
-- added using %%{name} macro in Buildroot and Source field,
-- added -q %setup parameter.
-
-* Thu Apr 21 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.2-2]
-- spec file rewrited for using Buildroot,
-- info pages moved to devel,
-- added "Requires: aalib = %%{PACKAGE_VERSION}" for devel header,
-- added %clean section,
-- added URL,
-- added stripping programs and AA shared library,
-- added usung $RPM_OPT_FLAGS in CFLAGS during compiling, 
-- Copyright satment changed to LGPL,
-- removed COPYING from %doc (Copyright satment is in header),
-- addec "Prereq: /sbin/install-info" for devel subpackage",
-- added %%{version} to Source url,
-- added %defattr and %attr macros in %files (allows building package from
-  non-root account); %defattr requires rpm >= 2.4.99.
-
-* Sun Mar  8 1998 ??? <root@pentium.home.cz>
-  [1.2-1]
-- first release in rpm packages.
+* Wed Jun 30 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [1.2-9]
+- based on RH spec,
+- spec rewrited by PLD team,
+- pl translation Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
