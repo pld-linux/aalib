@@ -1,15 +1,15 @@
-Summary:     An ASCII art GFX library
-Summary(pl): Biblioteka GFX sztuki w ASCII
-Name:        aalib
-Version:     1.2
-Release:     7
-Copyright:   LGPL
-Group:       Libraries
-Group(pl):   Biblioteki
-Source:      ftp://ftp.ta.jcu.cz/pub/aa/%{name}-%{version}.tar.gz
-Patch0:      aalib-xref.patch
-Patch1:      aalib-info.patch
-URL:         http://horac.ta.jcu.cz/aa/aalib/
+Summary:	An ASCII art GFX library
+Summary(pl):	Biblioteka GFX sztuki w ASCII
+Name:		aalib
+Version:	1.2
+Release:	8
+Copyright:	LGPL
+Group:		Libraries
+Group(pl):	Biblioteki
+Source:		ftp://ftp.ta.jcu.cz/pub/aa/%{name}-%{version}.tar.gz
+Patch0:		aalib-xref.patch
+Patch1:		aalib-info.patch
+URL:		http://horac.ta.jcu.cz/aa/aalib/
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -77,13 +77,16 @@ Narzêdzia AA-lib.
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" \
-./configure %{_target_platform} \
-	--prefix=/usr 
+%configure
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install prefix=$RPM_BUILD_ROOT/usr
+make install prefix=$RPM_BUILD_ROOT/%{_prefix} \
+	bindir=$RPM_BUILD_ROOT/%{_bindir} \
+	libdir=$RPM_BUILD_ROOT/%{_libdir} \
+	infodir=$RPM_BUILD_ROOT/%{_infodir} \
+	includedir=$RPM_BUILD_ROOT/%{_includedir}
 
 strip $RPM_BUILD_ROOT/usr/{bin/*,lib/lib*.so.*.*}
 
@@ -121,6 +124,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 
 %changelog
+* Mon Jun 07 1999 Jan Rêkorajski <baggins@pld.org.pl>
+  [1.2-8]
+- spec cleanup
+
 * Mon Apr  5 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [1.2-7]
 - added Group(pl),
