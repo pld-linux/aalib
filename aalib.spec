@@ -1,4 +1,5 @@
 Summary:	An ASCII art GFX library
+Summary(fr):	Bibliothèque AA (Ascii Art)
 Summary(pl):	Biblioteka GFX sztuki w ASCII
 Name:		aalib
 Version:	1.2
@@ -17,13 +18,17 @@ BuildRequires:	XFree86-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
-AA-lib is a low level gfx library just as many other libraries are.
-The main difference is that AA-lib does not require graphics device. In
-fact, there is no graphical output possible. AA-lib replaces those
-old-fashioned output methods with powerful ascii-art renderer. Now my
-linux boots with a nice penguin logo at secondary display (yes! Like
-Win95 does:) AA-lib API is designed to be similar to other graphics
-libraries. Learning a new API would be a piece of cake!
+AA-lib is a low level gfx library just as many other libraries are. The main
+difference is that AA-lib does not require graphics device. In fact, there
+is no graphical output possible. AA-lib replaces those old-fashioned output
+methods with powerful ascii-art renderer. Now my linux boots with a nice
+penguin logo at secondary display (yes! Like Win95 does:) AA-lib API is
+designed to be similar to other graphics libraries. Learning a new API would
+be a piece of cake!
+
+%description -l fr
+La bibliothèque AA est nécessaire pour GIMP. Elle offre la possibilité de
+travailler dans des contextes graphiques sans affichage.
 
 %description -l pl
 AA-lib jest niskopoziomow± bibliotek± gfx podobnie jak wiele innych bibliotek.
