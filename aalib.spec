@@ -10,22 +10,6 @@ Version:	1.4rc5
 Release:	5
 License:	LGPL
 Group:		Libraries
-Group(cs):	Knihovny
-Group(da):	Biblioteker
-Group(de):	Bibliotheken
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(is):	AПgerПasЖfn
-Group(it):	Librerie
-Group(ja):	╔И╔╓╔ж╔И╔Й
-Group(no):	Biblioteker
-Group(pl):	Biblioteki
-Group(pt):	Bibliotecas
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(sl):	Knji╬nice
-Group(sv):	Bibliotek
-Group(uk):	Б╕бл╕отеки
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/aa-project/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 URL:		http://aa-project.sourceforge.net/
@@ -86,22 +70,6 @@ Summary(pl):	Pliki nagЁСwkowe dla aalib
 Summary(ru):	Хедеры для построения программ с AAlib
 Summary(uk):	Хедери для побудови програм з AAlib
 Group:		Libraries
-Group(cs):	Knihovny
-Group(da):	Biblioteker
-Group(de):	Bibliotheken
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(is):	AПgerПasЖfn
-Group(it):	Librerie
-Group(ja):	╔И╔╓╔ж╔И╔Й
-Group(no):	Biblioteker
-Group(pl):	Biblioteki
-Group(pt):	Bibliotecas
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(sl):	Knji╬nice
-Group(sv):	Bibliotek
-Group(uk):	Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Requires:	slang-devel
 Requires:	gpm-devel
@@ -125,22 +93,6 @@ Summary(pl):	Statyczna biblioteka aalib
 Summary(ru):	Статическая библиотека для построения программ с aalib
 Summary(uk):	Статична б╕бл╕отека для побудови програм з aalib
 Group:		Libraries
-Group(cs):	Knihovny
-Group(da):	Biblioteker
-Group(de):	Bibliotheken
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(is):	AПgerПasЖfn
-Group(it):	Librerie
-Group(ja):	╔И╔╓╔ж╔И╔Й
-Group(no):	Biblioteker
-Group(pl):	Biblioteki
-Group(pt):	Bibliotecas
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(sl):	Knji╬nice
-Group(sv):	Bibliotek
-Group(uk):	Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -161,20 +113,6 @@ Summary(pl):	NarzЙdzia AA-lib
 Summary(ru):	Утилиты для AA-lib
 Summary(uk):	Утил╕ти для AA-lib
 Group:		Applications/Terminal
-Group(cs):	Aplikace/TerminАl
-Group(da):	Programmer/Terminal
-Group(de):	Applikationen/Terminal
-Group(es):	Aplicaciones/Terminal
-Group(fr):	Applications/Terminal
-Group(is):	Forrit/Textaskilum
-Group(it):	Applicazioni/Terminale
-Group(no):	Applikasjoner/Terminal
-Group(pl):	Aplikacje/Terminal
-Group(pt):	AplicaГУes/Terminal
-Group(ru):	Приложения/Терминал
-Group(sl):	Programi/Terminal
-Group(sv):	TillДmpningar/Terminal
-Group(uk):	Прикладн╕ Програми/Терм╕нали
 Requires:	%{name} = %{version}
 
 %description progs
