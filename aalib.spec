@@ -10,6 +10,9 @@ Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	âÉÂÌÉÏÔÅËÉ
+Group(uk):	â¦ÂÌ¦ÏÔÅËÉ
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/aa-project/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 URL:		http://aa-project.sourceforge.net/
@@ -52,6 +55,9 @@ Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	âÉÂÌÉÏÔÅËÉ
+Group(uk):	â¦ÂÌ¦ÏÔÅËÉ
 Requires:	%{name} = %{version}
 Requires:	slang-devel
 Requires:	gpm-devel
@@ -60,7 +66,7 @@ Requires:	XFree86-devel
 %description devel
 The header files for development of programs using the AAlib.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe do pisania programów u¿ywaj±cych AAlib.
 
 %package static
@@ -71,12 +77,15 @@ Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	âÉÂÌÉÏÔÅËÉ
+Group(uk):	â¦ÂÌ¦ÏÔÅËÉ
 Requires:	%{name}-devel = %{version}
 
 %description static
 Static aalib library.
 
-%description -l pl static
+%description static -l pl
 Statyczna biblioteka aalib.
 
 %package progs
@@ -90,7 +99,7 @@ Requires:	%{name} = %{version}
 %description progs
 AA-lib tools.
 
-%description -l pl progs
+%description progs -l pl
 Narzêdzia AA-lib.
 
 %prep
@@ -113,6 +122,9 @@ rm -rf $RPM_BUILD_ROOT
 
 gzip -9nf README NEWS AUTHORS ANNOUNCE ChangeLog
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
@@ -121,9 +133,6 @@ gzip -9nf README NEWS AUTHORS ANNOUNCE ChangeLog
 
 %postun devel
 [ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
