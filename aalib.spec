@@ -7,7 +7,7 @@ Summary(ru):	Библиотека консольной графики (ASCII Art)
 Summary(uk):	Б╕бл╕отека консольно╖ граф╕ки (ASCII Art)
 Name:		aalib
 Version:	1.4rc5
-Release:	6
+Release:	7
 License:	LGPL
 Group:		Libraries
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/aa-project/%{name}-%{version}.tar.gz
@@ -151,8 +151,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_mandir}/man1
 install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1/aalib-config.1
 
-gzip -9nf README NEWS AUTHORS ANNOUNCE ChangeLog
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -171,7 +169,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README NEWS AUTHORS ANNOUNCE ChangeLog
 %attr(755,root,root) %{_bindir}/aalib-config
 %{_mandir}/man1/aalib-config.1*
 %attr(755,root,root) %{_libdir}/lib*.so
@@ -191,4 +189,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/aainfo
 %attr(755,root,root) %{_bindir}/aasavefont
 %attr(755,root,root) %{_bindir}/aatest
-%{_mandir}/man1/*
+%{_mandir}/man1/aafire.1*
