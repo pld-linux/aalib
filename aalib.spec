@@ -34,9 +34,6 @@ linux boots with a nice penguin logo at secondary display (yes! Like
 Win95 does:) AA-lib API is designed to be similar to other graphics
 libraries. Learning a new API would be a piece of cake!
 
-%description -l es
-Biblioteca ASCII art.
-
 %description -l fr
 La bibliothèque AA est nécessaire pour GIMP. Elle offre la possibilité
 de travailler dans des contextes graphiques sans affichage.
