@@ -53,10 +53,10 @@ Static aalib library.
 Statyczna biblioteka aalib
 
 %package progs
-Summary:    AA-lib tools
-ummary(pl): Narzêdzia AA-lib
-Requires:   %{name} = %{version}
-Group:      Utilities/Terminal
+Summary:     AA-lib tools
+Summary(pl): Narzêdzia AA-lib
+Requires:    %{name} = %{version}
+Group:       Utilities/Terminal
 
 %description progs
 AA-lib tools.
