@@ -3,7 +3,7 @@ Summary(fr):	Bibliothèque AA (Ascii Art)
 Summary(pl):	Biblioteka GFX sztuki w ASCII
 Name:		aalib
 Version:	1.2
-Release:	14
+Release:	15
 License:	LGPL
 Group:		Libraries
 Group(fr):	Librairies
@@ -13,7 +13,10 @@ Patch0:		%{name}-xref.patch
 Patch1:		%{name}-info.patch
 Patch2:		%{name}-autoconf.patch
 URL:		http://horac.ta.jcu.cz/aa/aalib/
+BuildRequires:	automake
+BuildRequires:	autoconf
 BuildRequires:	gpm-devel
+BuildRequires:	libtool
 BuildRequires:	slang-devel
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -89,8 +92,10 @@ Narzêdzia AA-lib.
 %patch2 -p1
 
 %build
-automake
+aclocal
 autoconf
+automake -a -c
+libtoolize --copy --force
 %configure
 %{__make}
 
@@ -120,11 +125,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc {README,NEWS,AUTHORS,ANNOUNCE,ChangeLog}.gz
+%doc *.gz
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
 %{_includedir}/*.h
-%{_infodir}/*.info.gz
+%{_infodir}/*.info.*
 
 %files static
 %defattr(644,root,root,755)
