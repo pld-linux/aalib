@@ -1,6 +1,6 @@
 diff -urN aalib-1.2.orig/aalib.texinfo aalib-1.2/aalib.texinfo
---- aalib-1.2.orig/aalib.texinfo	Sun Mar  8 21:46:45 1998
-+++ aalib-1.2/aalib.texinfo	Mon Apr  5 03:05:53 1999
+--- aalib-1.2.orig/doc/aalib.texinfo	Sun Mar  8 21:46:45 1998
++++ aalib-1.2/doc/aalib.texinfo	Mon Apr  5 03:05:53 1999
 @@ -6,9 +6,9 @@
  @end iftex
  @setfilename aalib.info
