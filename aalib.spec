@@ -19,27 +19,27 @@ BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-AA-lib is a low level gfx library just as many other libraries are. The
-main difference is that AA-lib does not require graphics device. In fact,
-there is no graphical output possible. AA-lib replaces those old-fashioned
-output methods with powerful ascii-art renderer. Now my linux boots with a
-nice penguin logo at secondary display (yes! Like Win95 does:) AA-lib API
-is designed to be similar to other graphics libraries. Learning a new API
-would be a piece of cake!
+AA-lib is a low level gfx library just as many other libraries are.
+The main difference is that AA-lib does not require graphics device.
+In fact, there is no graphical output possible. AA-lib replaces those
+old-fashioned output methods with powerful ascii-art renderer. Now my
+linux boots with a nice penguin logo at secondary display (yes! Like
+Win95 does:) AA-lib API is designed to be similar to other graphics
+libraries. Learning a new API would be a piece of cake!
 
 %description -l fr
-La bibliothèque AA est nécessaire pour GIMP. Elle offre la possibilité de
-travailler dans des contextes graphiques sans affichage.
+La bibliothèque AA est nécessaire pour GIMP. Elle offre la possibilité
+de travailler dans des contextes graphiques sans affichage.
 
 %description -l pl
 AA-lib jest niskopoziomow± bibliotek± gfx podobnie jak wiele innych
-bibliotek. G³ówna ró¿nica pomiêdzy nimi jest taka, ¿e AA-lib nie wymaga
-trybu graficznego. W³a¶ciwie nie ma mo¿liwo¶ci wy¶wietlenia czego¶ w trybie
-graficznym. AA-lib zastêpuje te staromodne metody wysoko wydajnym
-narzêdziem do renderowania ascii-art. Teraz mój linux startuje z ³adnym
-logo pingwina na drugim monitorze. AA-lib API jest zaprojektowane tak by
-byæ podobnym do innych graficznych bibliotek. Nauka nowego API bêdzie bu³k±
-z mas³em!
+bibliotek. G³ówna ró¿nica pomiêdzy nimi jest taka, ¿e AA-lib nie
+wymaga trybu graficznego. W³a¶ciwie nie ma mo¿liwo¶ci wy¶wietlenia
+czego¶ w trybie graficznym. AA-lib zastêpuje te staromodne metody
+wysoko wydajnym narzêdziem do renderowania ascii-art. Teraz mój linux
+startuje z ³adnym logo pingwina na drugim monitorze. AA-lib API jest
+zaprojektowane tak by byæ podobnym do innych graficznych bibliotek.
+Nauka nowego API bêdzie bu³k± z mas³em!
 
 %package devel
 Summary:	Header files libraries for aalib
@@ -117,6 +117,7 @@ gzip -9nf $RPM_BUILD_ROOT%{_infodir}/*.info \
 rm -rf $RPM_BUILD_ROOT
 
 %files
+%defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
@@ -128,7 +129,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_infodir}/*.info.gz
 
 %files static
-%attr(644,root,root) %{_libdir}/lib*.a
+%defattr(644,root,root,755)
+%{_libdir}/lib*.a
 
 %files progs
+%defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
