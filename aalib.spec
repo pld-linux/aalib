@@ -77,7 +77,7 @@ Narzêdzia AA-lib.
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" \
-./configure \
+./configure %{_target} \
 	--prefix=/usr 
 make
 
