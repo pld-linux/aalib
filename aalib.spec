@@ -23,6 +23,7 @@ BuildRequires:	automake
 BuildRequires:	gpm-devel
 BuildRequires:	libtool
 BuildRequires:	slang-devel
+BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
