@@ -1,22 +1,19 @@
 Summary:	An ASCII art GFX library
 Summary(fr):	Bibliothèque AA (Ascii Art)
-Summary(pl):	Biblioteka GFX sztuki w ASCII
+Summary(pl):	Biblioteka graficzna ASCII Art
 Name:		aalib
-Version:	1.2
-Release:	15
+Version:	1.4rc5
+Release:	1
 License:	LGPL
 Group:		Libraries
+Group(de):	Libraries
+Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
-Source0:	ftp://ftp.ta.jcu.cz/pub/aa/%{name}-%{version}.tar.gz
-Patch0:		%{name}-xref.patch
-Patch1:		%{name}-info.patch
-Patch2:		%{name}-autoconf.patch
-URL:		http://horac.ta.jcu.cz/aa/aalib/
-BuildRequires:	automake
-BuildRequires:	autoconf
+Source0:	ftp://download.sourceforge.net/pub/sourceforge/aa-project/%{name}-%{version}.tar.gz
+Patch0:		%{name}-info.patch
+URL:		http://aa-project.sourceforge.net/
 BuildRequires:	gpm-devel
-BuildRequires:	libtool
 BuildRequires:	slang-devel
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,11 +32,11 @@ La bibliothèque AA est nécessaire pour GIMP. Elle offre la possibilité
 de travailler dans des contextes graphiques sans affichage.
 
 %description -l pl
-AA-lib jest niskopoziomow± bibliotek± gfx podobnie jak wiele innych
-bibliotek. G³ówna ró¿nica pomiêdzy nimi jest taka, ¿e AA-lib nie
+AA-lib jest niskopoziomow± bibliotek± graficzn± podobnie jak wiele
+innych bibliotek. G³ówna ró¿nica pomiêdzy nimi jest taka, ¿e AA-lib nie
 wymaga trybu graficznego. W³a¶ciwie nie ma mo¿liwo¶ci wy¶wietlenia
 czego¶ w trybie graficznym. AA-lib zastêpuje te staromodne metody
-wysoko wydajnym narzêdziem do renderowania ascii-art. Teraz mój linux
+wysoko wydajnym narzêdziem do renderowania ascii-art. Teraz mój Linux
 startuje z ³adnym logo pingwina na drugim monitorze. AA-lib API jest
 zaprojektowane tak by byæ podobnym do innych graficznych bibliotek.
 Nauka nowego API bêdzie bu³k± z mas³em!
@@ -48,6 +45,8 @@ Nauka nowego API bêdzie bu³k± z mas³em!
 Summary:	Header files libraries for aalib
 Summary(pl):	Pliki nag³ówkowe dla aalib
 Group:		Libraries
+Group(de):	Libraries
+Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 Requires:	%{name} = %{version}
@@ -62,6 +61,8 @@ Pliki nag³ówkowe do pisania programów u¿ywaj±cych AAlib.
 Summary:	Static aalib library
 Summary(pl):	Statyczna biblioteka aalib
 Group:		Libraries
+Group(de):	Libraries
+Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 Requires:	%{name}-devel = %{version}
@@ -75,8 +76,9 @@ Statyczna biblioteka aalib.
 %package progs
 Summary:	AA-lib tools
 Summary(pl):	Narzêdzia AA-lib
-Group:		Utilities/Terminal
-Group(pl):	Narzêdzia/Terminal
+Group:		Applications/Terminal
+Group(de):	Applikationen/Terminal
+Group(pl):	Aplikacje/Terminal
 Requires:	%{name} = %{version}
 
 %description progs
@@ -86,16 +88,10 @@ AA-lib tools.
 Narzêdzia AA-lib.
 
 %prep
-%setup -q
+%setup -q -n %{name}-1.4.0
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
 
 %build
-aclocal
-autoconf
-automake -a -c
-libtoolize --copy --force
 %configure
 %{__make}
 
@@ -126,10 +122,13 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %doc *.gz
+%attr(755,root,root) %{_bindir}/aalib-config
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
 %{_includedir}/*.h
-%{_infodir}/*.info.*
+%{_infodir}/*.info*
+%{_mandir}/man3/*
+%{_aclocaldir}/*.m4
 
 %files static
 %defattr(644,root,root,755)
@@ -137,4 +136,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files progs
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/aafire
+%attr(755,root,root) %{_bindir}/aainfo
+%attr(755,root,root) %{_bindir}/aasavefont
+%attr(755,root,root) %{_bindir}/aatest
+%{_mandir}/man1/*
