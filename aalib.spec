@@ -72,11 +72,11 @@ Summary:	Header files and libraries for aalib
 Summary(pl):	Pliki nagЁСwkowe dla aalib
 Summary(ru):	Хедеры для построения программ с AAlib
 Summary(uk):	Хедери для побудови програм з AAlib
-Group:		Libraries
-Requires:	%{name} = %{version}
-Requires:	slang-devel
-Requires:	gpm-devel
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
 Requires:	XFree86-devel
+Requires:	gpm-devel
+Requires:	slang-devel
 
 %description devel
 The header files for development of programs using the AAlib.
@@ -95,8 +95,8 @@ Summary:	Static aalib library
 Summary(pl):	Statyczna biblioteka aalib
 Summary(ru):	Статическая библиотека для построения программ с aalib
 Summary(uk):	Статична б╕бл╕отека для побудови програм з aalib
-Group:		Libraries
-Requires:	%{name}-devel = %{version}
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static aalib library.
@@ -116,7 +116,7 @@ Summary(pl):	NarzЙdzia AA-lib
 Summary(ru):	Утилиты для AA-lib
 Summary(uk):	Утил╕ти для AA-lib
 Group:		Applications/Terminal
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description progs
 AA-lib tools.
