@@ -137,7 +137,7 @@ Narzêdzia AA-lib.
 %patch2 -p1
 
 # don't include aclocal.m4 from configure.in
-tail -n +1 configure.in > c.tmp
+tail -n +2 configure.in > c.tmp
 mv -f c.tmp configure.in
 
 %build
