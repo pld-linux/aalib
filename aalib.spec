@@ -105,17 +105,17 @@ fi
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%attr(755,root,root) /usr/lib/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %doc {README,NEWS,AUTHORS,ANNOUNCE,ChangeLog}.gz
 /usr/include/*.h
-/usr/lib/lib*.so
+%{_libdir}/lib*.so
 %{_infodir}/*.info.gz
 
 %files static
-%attr(644,root,root) /usr/lib/lib*.a
+%attr(644,root,root) %{_libdir}/lib*.a
 
 %files progs
 %attr(755,root,root) /usr/bin/*
