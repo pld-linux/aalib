@@ -2,7 +2,7 @@ Summary:	An ASCII art GFX library
 Summary(pl):	Biblioteka GFX sztuki w ASCII
 Name:		aalib
 Version:	1.2
-Release:	10
+Release:	11
 Copyright:	LGPL
 Group:		Libraries
 Group(pl):	Biblioteki
@@ -102,7 +102,7 @@ gzip -9nf $RPM_BUILD_ROOT%{_infodir}/*.info \
 %post devel
 /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
-%preun devel
+%postun devel
 /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %clean
