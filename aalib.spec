@@ -149,8 +149,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_mandir}/man1
-install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1/aalib-config.1
+install -D %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1/aalib-config.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
