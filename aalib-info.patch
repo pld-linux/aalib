@@ -1,0 +1,15 @@
+diff -urN aalib-1.2.orig/aalib.texinfo aalib-1.2/aalib.texinfo
+--- aalib-1.2.orig/aalib.texinfo	Sun Mar  8 21:46:45 1998
++++ aalib-1.2/aalib.texinfo	Mon Apr  5 03:05:53 1999
+@@ -6,9 +6,9 @@
+ @end iftex
+ @setfilename aalib.info
+ @settitle An ascii-art library
+-@dircategory Libraries
++@dircategory Libraries:
+ @direntry
+- * AA-lib: (aalib).              An ASCII-art graphics library
++ * AA-lib: (aalib)			An ASCII-art graphics library.
+ @end direntry
+ 
+ 
