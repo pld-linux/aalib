@@ -166,17 +166,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README NEWS AUTHORS ANNOUNCE ChangeLog
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%doc README NEWS AUTHORS ANNOUNCE ChangeLog
 %attr(755,root,root) %{_bindir}/aalib-config
-%{_mandir}/man1/aalib-config.1*
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/*.h
 %{_infodir}/*.info*
+%{_mandir}/man1/aalib-config.1*
 %{_mandir}/man3/*
 %{_aclocaldir}/*.m4
 
