@@ -10,7 +10,7 @@ Version:	1.4rc5
 Release:	7
 License:	LGPL
 Group:		Libraries
-Source0:	ftp://download.sourceforge.net/pub/sourceforge/aa-project/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/aa-project/%{name}-%{version}.tar.gz
 Source1:	%{name}-config.1
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-debian_man.patch
