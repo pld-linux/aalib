@@ -141,7 +141,7 @@ rm -rf $RPM_BUILD_ROOT
 - added "Requires: aalib = %%{PACKAGE_VERSION}" for devel header,
 - added %clean section,
 - added URL,
-- added striping programs and AA shared library,
+- added stripping programs and AA shared library,
 - added usung $RPM_OPT_FLAGS in CFLAGS during compiling, 
 - Copyright satment changed to LGPL,
 - removed COPYING from %doc (Copyright satment is in header),
