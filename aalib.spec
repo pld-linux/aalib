@@ -7,7 +7,7 @@ Summary(ru):	Библиотека консольной графики (ASCII Art)
 Summary(uk):	Б╕бл╕отека консольно╖ граф╕ки (ASCII Art)
 Name:		aalib
 Version:	1.4rc5
-Release:	8
+Release:	9
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/aa-project/%{name}-%{version}.tar.gz
@@ -15,6 +15,7 @@ Source0:	http://dl.sourceforge.net/aa-project/%{name}-%{version}.tar.gz
 Source1:	%{name}-config.1
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-debian_man.patch
+Patch2:		%{name}-am18.patch
 URL:		http://aa-project.sourceforge.net/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
@@ -133,9 +134,9 @@ NarzЙdzia AA-lib.
 %setup -q -n %{name}-1.4.0
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
