@@ -11,9 +11,9 @@ Patch0:		aalib-xref.patch
 Patch1:		aalib-info.patch
 Patch2:		aalib-autoconf.patch
 URL:		http://horac.ta.jcu.cz/aa/aalib/
-BuildPrereq:	gpm-devel
-BuildPrereq:	slang-devel
-BuildPrereq:	XFree86-devel
+BuildRequires:	gpm-devel
+BuildRequires:	slang-devel
+BuildRequires:	XFree86-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
