@@ -1,0 +1,40 @@
+--- aalib-1.4p5.orig/man/aafire.1
++++ aalib-1.4p5/man/aafire.1
+@@ -23,10 +23,10 @@
+ programs.
+ .PP
+ All of these programs exist to demonstrate the capabilities of the aalib
+-library, an ascii art library.
++library, an ASCII art library.
+ .PP
+ .B aafire
+-displays burning ascii art flames.
++displays burning ASCII art flames.
+ .PP
+ .B aainfo
+ displays information about what drivers aalib will use for the display,
+@@ -38,6 +38,24 @@
+ .PP
+ .B aatest
+ tests the capabilities of aalib.
++.SH BUGS
++Please report any bugs you find to Jan Hubicka <hubicka@freesoft.cz>.
++.SH LICENSE
++.BR aafire ,
++.BR aainfo ,
++.BR aasavefont ,
++and 
++.BR aatest
++are all covered by the GNU Lesser General Public License (LGPL).
+ .SH AUTHOR
++Jan Hubicka <hubicka@freesoft.cz>
++.PP
+ This manual page was written by Joey Hess,
+ for the Debian GNU/Linux system.
++.SH SEE ALSO
++.BR bb (1),
++.BR aatv (1),
++.BR aview (1),
++.BR asciiview (1),
++.BR aaflip (1),
++.BR xaos (6).
