@@ -11,7 +11,7 @@ Release:	9
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/aa-project/%{name}-%{version}.tar.gz
-# Source0-md5: 9801095c42bba12edebd1902bcf0a990
+# Source0-md5:	9801095c42bba12edebd1902bcf0a990
 Source1:	%{name}-config.1
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-debian_man.patch
