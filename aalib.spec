@@ -2,10 +2,13 @@ Summary:     An ASCII art GFX library
 Summary(pl): Biblioteka GFX sztuki w ASCII
 Name:        aalib
 Version:     1.2
-Release:     6
+Release:     7
 Copyright:   LGPL
 Group:       Libraries
+Group(pl):   Biblioteki
 Source:      ftp://ftp.ta.jcu.cz/pub/aa/%{name}-%{version}.tar.gz
+Patch0:      aalib-xref.patch
+Patch1:      aalib-info.patch
 URL:         http://horac.ta.jcu.cz/aa/aalib/
 Buildroot:   /tmp/%{name}-%{version}-root
 
@@ -20,10 +23,10 @@ libraries. Learning a new API would be a piece of cake!
 
 %description -l pl
 AA-lib jest niskopoziomow± bibliotek± gfx podobnie jak wiele innych bibliotek.
-G³ówna ró¿nica pomiêdzi nimi jest taka, ¿e AA-lib nie wymaga trybu graficznego.
+G³ówna ró¿nica pomiêdzy nimi jest taka, ¿e AA-lib nie wymaga trybu graficznego.
 W³a¶ciwie nie ma mo¿liwo¶ci wy¶wietlenia czego¶ w trybie graficznym. AA-lib
 zastêpuje te staromodne metody wysoko wydajnym narzêdziem do renderowania
-asci-art. Teraz mój linux startuje z ³adnym logo pingwina na drugim monitorze.
+ascii-art. Teraz mój linux startuje z ³adnym logo pingwina na drugim monitorze.
 AA-lib API jest zaprojektowane tak by byæ podobnym do innych graficznych
 bibliotek. Nauka nowego API bêdzie bu³k± z mas³em!
 
@@ -31,6 +34,7 @@ bibliotek. Nauka nowego API bêdzie bu³k± z mas³em!
 Summary:     Header files libraries for aalib
 Summary(pl): Pliki nag³ówkowe dla aalib
 Group:       Libraries
+Group(pl):   Biblioteki
 Requires:    %{name} = %{version}
 Prereq:      /sbin/install-info
 
@@ -44,19 +48,21 @@ Pliki nag³ówkowe do pisania programów u¿ywaj±cych AAlib.
 Summary:     Static aalib library
 Summary(pl): Statyczna biblioteka aalib
 Group:       Libraries
+Group(pl):   Biblioteki
 Requires:    %{name}-devel = %{version}
 
 %description static
 Static aalib library.
 
 %description -l pl static
-Statyczna biblioteka aalib
+Statyczna biblioteka aalib.
 
 %package progs
 Summary:     AA-lib tools
 Summary(pl): Narzêdzia AA-lib
-Requires:    %{name} = %{version}
 Group:       Utilities/Terminal
+Group(pl):   Narzêdzia/Terminal
+Requires:    %{name} = %{version}
 
 %description progs
 AA-lib tools.
@@ -66,47 +72,65 @@ Narzêdzia AA-lib.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=/usr
+CFLAGS="$RPM_OPT_FLAGS" \
+./configure \
+	--prefix=/usr 
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
 make install prefix=$RPM_BUILD_ROOT/usr
-gzip -9fn $RPM_BUILD_ROOT/usr/info/*.info
 
 strip $RPM_BUILD_ROOT/usr/{bin/*,lib/lib*.so.*.*}
+
+gzip -9nf $RPM_BUILD_ROOT/usr/info/*.info \
+	README NEWS AUTHORS ANNOUNCE ChangeLog
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %post devel
-/sbin/install-info --info-dir=/usr/info /usr/info/aalib.info.gz
+/sbin/install-info /usr/info/aalib.info.gz /etc/info-dir
 
 %preun devel
-/sbin/install-info --delete --info-dir=/usr/info /usr/info/aalib.info.gz
+if [ "$1" = "0" ]; then
+	/sbin/install-info --delete /usr/info/aalib.info.gz /etc/info-dir
+fi
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%attr(755, root, root) /usr/lib/lib*.so.*.*
+%attr(755,root,root) /usr/lib/lib*.so.*.*
 
 %files devel
-%defattr(644, root, root, 755)
-%doc README NEWS AUTHORS ANNOUNCE
+%defattr(644,root,root,755)
+%doc {README,NEWS,AUTHORS,ANNOUNCE,ChangeLog}.gz
 /usr/include/*.h
 /usr/lib/lib*.so
 /usr/info/*.info.gz
 
 %files static
-%attr(644, root, root) /usr/lib/lib*.a
+%attr(644,root,root) /usr/lib/lib*.a
 
 %files progs
-%attr(755, root, root) /usr/bin/*
+%attr(755,root,root) /usr/bin/*
 
 %changelog
+* Mon Apr  5 1999 Piotr Czerwiñski <pius@pld.org.pl>
+  [1.2-7]
+- added Group(pl),
+- fixed info entry (aalib-info.patch), 
+- fixed @xref definitions in aalib.texinfo (aalib-xref.patch),
+- standarized {un}registering info pages,
+- added gzipping documentation,
+- added ChangeLog to %doc,
+- cosmetic changes for common l&f.
+
 * Sat Sep 26 1998 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
   [1.2-6]
 - added pl translation.
