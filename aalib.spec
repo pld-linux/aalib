@@ -1,19 +1,30 @@
 Summary:	An ASCII art GFX library
 Summary(fr):	BibliothХque AA (Ascii Art)
-Summary(es): Biblioteca ASCII art
+Summary(es):	Biblioteca ASCII art
 Summary(pl):	Biblioteka graficzna ASCII Art
-Summary(pt_BR): Uma biblioteca para ASCII art
+Summary(pt_BR):	Uma biblioteca para ASCII art
+Summary(ru):	Библиотека консольной графики (ASCII Art)
+Summary(uk):	Б╕бл╕отека консольно╖ граф╕ки (ASCII Art)
 Name:		aalib
 Version:	1.4rc5
-Release:	4
+Release:	5
 License:	LGPL
 Group:		Libraries
-Group(de):	Libraries
+Group(cs):	Knihovny
+Group(da):	Biblioteker
+Group(de):	Bibliotheken
 Group(es):	Bibliotecas
 Group(fr):	Librairies
+Group(is):	AПgerПasЖfn
+Group(it):	Librerie
+Group(ja):	╔И╔╓╔ж╔И╔Й
+Group(no):	Biblioteker
 Group(pl):	Biblioteki
+Group(pt):	Bibliotecas
 Group(pt_BR):	Bibliotecas
 Group(ru):	Библиотеки
+Group(sl):	Knji╬nice
+Group(sv):	Bibliotek
 Group(uk):	Б╕бл╕отеки
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/aa-project/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
@@ -55,16 +66,41 @@ Nauka nowego API bЙdzie buЁk╠ z masЁem!
 %description -l pt_BR
 Uma biblioteca para trabalhar com ASCII art.
 
+%description -l ru
+AA-lib - это низкоуровневая графическая библиотека. Ее основное
+отличие от других графических библиотек в том, что AA-lib не требует
+графического устройства. На самом деле, графический (в обычном смысле
+этого слова) вывод и невозможен. AA-lib переводит графику в так
+называемый ASCII-Art.
+
+%description -l uk
+AA-lib - це низькор╕внева граф╕чна б╕бл╕отека. Головна в╕дм╕нн╕сть ╖╖
+в╕д ╕нших граф╕чних б╕бл╕отек в тому, о AA-lib не потребу╓ граф╕чного
+пристрою. Насправд╕, граф╕чний (в звичному розум╕нн╕ цього слова)
+вив╕д ╕ неможливий. AA-lib перетворю╓ граф╕ку в так званий ASCII-Art.
+
+
 %package devel
-Summary:	Header files libraries for aalib
+Summary:	Header files and libraries for aalib
 Summary(pl):	Pliki nagЁСwkowe dla aalib
+Summary(ru):	Хедеры для построения программ с AAlib
+Summary(uk):	Хедери для побудови програм з AAlib
 Group:		Libraries
-Group(de):	Libraries
+Group(cs):	Knihovny
+Group(da):	Biblioteker
+Group(de):	Bibliotheken
 Group(es):	Bibliotecas
 Group(fr):	Librairies
+Group(is):	AПgerПasЖfn
+Group(it):	Librerie
+Group(ja):	╔И╔╓╔ж╔И╔Й
+Group(no):	Biblioteker
 Group(pl):	Biblioteki
+Group(pt):	Bibliotecas
 Group(pt_BR):	Bibliotecas
 Group(ru):	Библиотеки
+Group(sl):	Knji╬nice
+Group(sv):	Bibliotek
 Group(uk):	Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Requires:	slang-devel
@@ -77,16 +113,33 @@ The header files for development of programs using the AAlib.
 %description devel -l pl
 Pliki nagЁСwkowe do pisania programСw u©ywaj╠cych AAlib.
 
+%description devel -l ru
+Хедеры для построения программ с AAlib.
+
+%description devel -l uk
+Хедери для побудови програм з AAlib.
+
 %package static
 Summary:	Static aalib library
 Summary(pl):	Statyczna biblioteka aalib
+Summary(ru):	Статическая библиотека для построения программ с aalib
+Summary(uk):	Статична б╕бл╕отека для побудови програм з aalib
 Group:		Libraries
-Group(de):	Libraries
+Group(cs):	Knihovny
+Group(da):	Biblioteker
+Group(de):	Bibliotheken
 Group(es):	Bibliotecas
 Group(fr):	Librairies
+Group(is):	AПgerПasЖfn
+Group(it):	Librerie
+Group(ja):	╔И╔╓╔ж╔И╔Й
+Group(no):	Biblioteker
 Group(pl):	Biblioteki
+Group(pt):	Bibliotecas
 Group(pt_BR):	Bibliotecas
 Group(ru):	Библиотеки
+Group(sl):	Knji╬nice
+Group(sv):	Bibliotek
 Group(uk):	Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
@@ -96,12 +149,32 @@ Static aalib library.
 %description static -l pl
 Statyczna biblioteka aalib.
 
+%description static -l ru
+Статическая библиотека для программирования с aalib.
+
+%description static -l uk
+Статична б╕бл╕отека для програмування з aalib.
+
 %package progs
 Summary:	AA-lib tools
 Summary(pl):	NarzЙdzia AA-lib
+Summary(ru):	Утилиты для AA-lib
+Summary(uk):	Утил╕ти для AA-lib
 Group:		Applications/Terminal
+Group(cs):	Aplikace/TerminАl
+Group(da):	Programmer/Terminal
 Group(de):	Applikationen/Terminal
+Group(es):	Aplicaciones/Terminal
+Group(fr):	Applications/Terminal
+Group(is):	Forrit/Textaskilum
+Group(it):	Applicazioni/Terminale
+Group(no):	Applikasjoner/Terminal
 Group(pl):	Aplikacje/Terminal
+Group(pt):	AplicaГУes/Terminal
+Group(ru):	Приложения/Терминал
+Group(sl):	Programi/Terminal
+Group(sv):	TillДmpningar/Terminal
+Group(uk):	Прикладн╕ Програми/Терм╕нали
 Requires:	%{name} = %{version}
 
 %description progs
@@ -109,6 +182,12 @@ AA-lib tools.
 
 %description progs -l pl
 NarzЙdzia AA-lib.
+
+%description progs -l ru
+Утилиты для AA-lib.
+
+%description progs -l uk
+Утил╕ти для AA-lib.
 
 %prep
 %setup -q -n %{name}-1.4.0
