@@ -15,7 +15,7 @@ URL:		http://horac.ta.jcu.cz/aa/aalib/
 BuildRequires:	gpm-devel
 BuildRequires:	slang-devel
 BuildRequires:	XFree86-devel
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 AA-lib is a low level gfx library just as many other libraries are. The main
