@@ -40,7 +40,7 @@ Summary(pl):	Pliki nag³ówkowe dla aalib
 Group:		Libraries
 Group(pl):	Biblioteki
 Requires:	%{name} = %{version}
-Prereq:		/sbin/install-info
+Prereq:		/usr/sbin/fix-info-dir
 
 %description devel
 The header files for development of programs using the AAlib.
@@ -100,12 +100,10 @@ gzip -9nf $RPM_BUILD_ROOT%{_infodir}/*.info \
 %postun -p /sbin/ldconfig
 
 %post devel
-/sbin/install-info %{_infodir}/aalib.info.gz /etc/info-dir
+/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %preun devel
-if [ "$1" = "0" ]; then
-	/sbin/install-info --delete %{_infodir}/aalib.info.gz /etc/info-dir
-fi
+/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
