@@ -3,7 +3,7 @@ Summary(fr):	Bibliothèque AA (Ascii Art)
 Summary(pl):	Biblioteka graficzna ASCII Art
 Name:		aalib
 Version:	1.4rc5
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Group(de):	Libraries
@@ -13,9 +13,12 @@ Group(pl):	Biblioteki
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/aa-project/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 URL:		http://aa-project.sourceforge.net/
-BuildRequires:	gpm-devel
-BuildRequires:	slang-devel
 BuildRequires:	XFree86-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gpm-devel
+BuildRequires:	libtool
+BuildRequires:	slang-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -92,6 +95,10 @@ Narzêdzia AA-lib.
 %patch0 -p1
 
 %build
+libtoolize --copy --force
+aclocal
+autoconf
+automake -a -c
 %configure
 %{__make}
 
