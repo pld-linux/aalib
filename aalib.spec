@@ -24,7 +24,7 @@ G³ówna ró¿nica pomiêdzi nimi jest taka, ¿e AA-lib nie wymaga trybu graficznego.
 W³a¶ciwie nie ma mo¿liwo¶ci wy¶wietlenia czego¶ w trybie graficznym. AA-lib
 zastêpuje te staromodne metody wysoko wydajnym narzêdziem do renderowania
 asci-art. Teraz mój linux startuje z ³adnym logo pingwina na drugim monitorze.
-AA-lib API jest zaprojektowane tak by byæ podobnym to innych graficznych
+AA-lib API jest zaprojektowane tak by byæ podobnym do innych graficznych
 bibliotek. Nauka nowego API bêdzie bu³k± z mas³em!
 
 %package devel
