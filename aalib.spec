@@ -89,7 +89,6 @@ Narzêdzia AA-lib.
 %patch2 -p1
 
 %build
-LDFLAGS="-s"; export LDFLAGS
 automake
 autoconf
 %configure
@@ -97,12 +96,11 @@ autoconf
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf $RPM_BUILD_ROOT%{_infodir}/*.info \
-	README NEWS AUTHORS ANNOUNCE ChangeLog
+gzip -9nf README NEWS AUTHORS ANNOUNCE ChangeLog
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
