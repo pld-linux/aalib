@@ -9,7 +9,7 @@ diff -urN aalib-1.2.orig/aalib.texinfo aalib-1.2/aalib.texinfo
 +@dircategory Libraries:
  @direntry
 - * AA-lib: (aalib).              An ASCII-art graphics library
-+ * AA-lib: (aalib)			An ASCII-art graphics library.
++ * AA-lib: (aalib)			An ASCII-art graphics library
  @end direntry
  
  
