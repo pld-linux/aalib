@@ -1,12 +1,13 @@
-Summary:   An ASCII art GFX library
-Name:      aalib
-Version:   1.2
-Release:   6
-Copyright: LGPL
-Group:     Libraries
-Source:    ftp://ftp.ta.jcu.cz/pub/aa/%{name}-%{version}.tar.gz
-URL:       http://horac.ta.jcu.cz/aa/aalib/
-Buildroot: /tmp/%{name}-%{version}-root
+Summary:     An ASCII art GFX library
+Summary(pl): Biblioteka GFX sztuki w ASCII
+Name:        aalib
+Version:     1.2
+Release:     6
+Copyright:   LGPL
+Group:       Libraries
+Source:      ftp://ftp.ta.jcu.cz/pub/aa/%{name}-%{version}.tar.gz
+URL:         http://horac.ta.jcu.cz/aa/aalib/
+Buildroot:   /tmp/%{name}-%{version}-root
 
 %description
 AA-lib is a low level gfx library just as many other libraries are.
@@ -17,30 +18,51 @@ linux boots with a nice penguin logo at secondary display (yes! Like
 Win95 does:) AA-lib API is designed to be similar to other graphics
 libraries. Learning a new API would be a piece of cake!
 
-%package   devel
-Summary:   header files libraries for aalib
-Group:     Libraries
-Requires:  aalib = %{version}
-Prereq:    /sbin/install-info
+%description -l pl
+AA-lib jest niskopoziomow± bibliotek± gfx podobnie jak wiele innych bibliotek.
+G³ówna ró¿nica pomiêdzi nimi jest taka, ¿e AA-lib nie wymaga trybu graficznego.
+W³a¶ciwie nie ma mo¿liwo¶ci wy¶wietlenia czego¶ w trybie graficznym. AA-lib
+zastêpuje te staromodne metody wysoko wydajnym narzêdziem do renderowania
+asci-art. Teraz mój linux startuje z ³adnym logo pingwina na drugim monitorze.
+AA-lib API jest zaprojektowane tak by byæ podobnym to innych graficznych
+bibliotek. Nauka nowego API bêdzie bu³k± z mas³em!
+
+%package devel
+Summary:     Header files libraries for aalib
+Summary(pl): Pliki nag³ówkowe dla aalib
+Group:       Libraries
+Requires:    %{name} = %{version}
+Prereq:      /sbin/install-info
 
 %description devel
 The header files for development of programs using the AAlib.
 
-%package   static
-Summary:   Static aalib library
-Group:     Libraries
-Requires:  %{name}-devel = %{version}
+%description -l pl devel
+Pliki nag³ówkowe do pisania programów u¿ywaj±cych AAlib.
+
+%package static
+Summary:     Static aalib library
+Summary(pl): Statyczna biblioteka aalib
+Group:       Libraries
+Requires:    %{name}-devel = %{version}
 
 %description static
 Static aalib library.
 
-%package   progs
-Summary:   AA-lib tools
-Requires:  %{name} = %{version}
-Group:     Utilities/Terminal
+%description -l pl static
+Statyczna biblioteka aalib
+
+%package progs
+Summary:    AA-lib tools
+ummary(pl): Narzêdzia AA-lib
+Requires:   %{name} = %{version}
+Group:      Utilities/Terminal
 
 %description progs
-AA-lib tools
+AA-lib tools.
+
+%description -l pl progs
+Narzêdzia AA-lib.
 
 %prep
 %setup -q
@@ -85,6 +107,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755, root, root) /usr/bin/*
 
 %changelog
+* Sat Sep 26 1998 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
+  [1.2-6]
+- added pl translation.
+
 * Fri Aug 28 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [1.2-5]
 - corected dependences in static "Requires: %%{name}-devel = %%{version}",
