@@ -3,7 +3,7 @@ Summary(fr):	Bibliothèque AA (Ascii Art)
 Summary(pl):	Biblioteka GFX sztuki w ASCII
 Name:		aalib
 Version:	1.2
-Release:	11
+Release:	12
 Copyright:	LGPL
 Group:		Libraries
 Group(pl):	Biblioteki
