@@ -36,8 +36,8 @@ de travailler dans des contextes graphiques sans affichage.
 
 %description -l pl
 AA-lib jest niskopoziomow± bibliotek± graficzn± podobnie jak wiele
-innych bibliotek. G³ówna ró¿nica pomiêdzy nimi jest taka, ¿e AA-lib nie
-wymaga trybu graficznego. W³a¶ciwie nie ma mo¿liwo¶ci wy¶wietlenia
+innych bibliotek. G³ówna ró¿nica pomiêdzy nimi jest taka, ¿e AA-lib
+nie wymaga trybu graficznego. W³a¶ciwie nie ma mo¿liwo¶ci wy¶wietlenia
 czego¶ w trybie graficznym. AA-lib zastêpuje te staromodne metody
 wysoko wydajnym narzêdziem do renderowania ascii-art. Teraz mój Linux
 startuje z ³adnym logo pingwina na drugim monitorze. AA-lib API jest
