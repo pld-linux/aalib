@@ -7,7 +7,7 @@ Summary(ru):	Библиотека консольной графики (ASCII Art)
 Summary(uk):	Б╕бл╕отека консольно╖ граф╕ки (ASCII Art)
 Name:		aalib
 Version:	1.4rc5
-Release:	9
+Release:	10
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/aa-project/%{name}-%{version}.tar.gz
@@ -22,7 +22,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gpm-devel
 BuildRequires:	libtool
-BuildRequires:	slang-devel
+BuildRequires:	slang-devel >= 2.0.0
 BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
