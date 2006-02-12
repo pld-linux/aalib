@@ -7,7 +7,7 @@ Summary(ru):	Библиотека консольной графики (ASCII Art)
 Summary(uk):	Б╕бл╕отека консольно╖ граф╕ки (ASCII Art)
 Name:		aalib
 Version:	1.4rc5
-Release:	10
+Release:	11
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/aa-project/%{name}-%{version}.tar.gz
@@ -17,7 +17,7 @@ Patch0:		%{name}-info.patch
 Patch1:		%{name}-debian_man.patch
 Patch2:		%{name}-am18.patch
 URL:		http://aa-project.sourceforge.net/
-BuildRequires:	XFree86-devel
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gpm-devel
@@ -72,7 +72,7 @@ Summary(ru):	Хедеры для построения программ с AAlib
 Summary(uk):	Хедери для побудови програм з AAlib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	XFree86-devel
+Requires:	xorg-lib-libX11-devel
 Requires:	gpm-devel
 Requires:	slang-devel
 
