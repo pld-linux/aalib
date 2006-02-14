@@ -17,13 +17,13 @@ Patch0:		%{name}-info.patch
 Patch1:		%{name}-debian_man.patch
 Patch2:		%{name}-am18.patch
 URL:		http://aa-project.sourceforge.net/
-BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gpm-devel
 BuildRequires:	libtool
 BuildRequires:	slang-devel >= 2.0.0
 BuildRequires:	texinfo
+BuildRequires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -72,9 +72,9 @@ Summary(ru):	Хедеры для построения программ с AAlib
 Summary(uk):	Хедери для побудови програм з AAlib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	xorg-lib-libX11-devel
 Requires:	gpm-devel
 Requires:	slang-devel
+Requires:	xorg-lib-libX11-devel
 
 %description devel
 The header files for development of programs using the AAlib.
