@@ -6,11 +6,14 @@ Summary(pt_BR):	Uma biblioteca para ASCII art
 Summary(ru):	Библиотека консольной графики (ASCII Art)
 Summary(uk):	Б╕бл╕отека консольно╖ граф╕ки (ASCII Art)
 Name:		aalib
-Version:	1.4rc5
-Release:	11
+%define         _rc     rc5
+%define         _rel    11
+Version:	1.4
+Release:	0.%{_rc}.%{_rel}
+Epoch:		1
 License:	LGPL
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/aa-project/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/aa-project/%{name}-%{version}%{_rc}.tar.gz
 # Source0-md5:	9801095c42bba12edebd1902bcf0a990
 Source1:	%{name}-config.1
 Patch0:		%{name}-info.patch
