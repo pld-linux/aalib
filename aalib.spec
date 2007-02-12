@@ -1,10 +1,10 @@
 Summary:	An ASCII art GFX library
-Summary(fr):	BibliothХque AA (Ascii Art)
-Summary(es):	Biblioteca ASCII art
-Summary(pl):	Biblioteka graficzna ASCII Art
-Summary(pt_BR):	Uma biblioteca para ASCII art
-Summary(ru):	Библиотека консольной графики (ASCII Art)
-Summary(uk):	Б╕бл╕отека консольно╖ граф╕ки (ASCII Art)
+Summary(fr.UTF-8):   Bibliothц╗que AA (Ascii Art)
+Summary(es.UTF-8):   Biblioteca ASCII art
+Summary(pl.UTF-8):   Biblioteka graficzna ASCII Art
+Summary(pt_BR.UTF-8):   Uma biblioteca para ASCII art
+Summary(ru.UTF-8):   п▒п╦п╠п╩п╦п╬я┌п╣п╨п╟ п╨п╬п╫я│п╬п╩я▄п╫п╬п╧ пЁя─п╟я└п╦п╨п╦ (ASCII Art)
+Summary(uk.UTF-8):   п▒я√п╠п╩я√п╬я┌п╣п╨п╟ п╨п╬п╫я│п╬п╩я▄п╫п╬я≈ пЁя─п╟я└я√п╨п╦ (ASCII Art)
 Name:		aalib
 %define         _rc     rc5
 %define         _rel    11
@@ -38,41 +38,41 @@ linux boots with a nice penguin logo at secondary display (yes! Like
 Win95 does:) AA-lib API is designed to be similar to other graphics
 libraries. Learning a new API would be a piece of cake!
 
-%description -l fr
-La bibliothХque AA est nИcessaire pour GIMP. Elle offre la possibilitИ
+%description -l fr.UTF-8
+La bibliothц╗que AA est nц╘cessaire pour GIMP. Elle offre la possibilitц╘
 de travailler dans des contextes graphiques sans affichage.
 
-%description -l pl
-AA-lib jest niskopoziomow╠ bibliotek╠ graficzn╠ podobnie jak wiele
-innych bibliotek. GЁСwna rС©nica pomiЙdzy nimi jest taka, ©e AA-lib
-nie wymaga trybu graficznego. WЁa╤ciwie nie ma mo©liwo╤ci wy╤wietlenia
-czego╤ w trybie graficznym. AA-lib zastЙpuje te staromodne metody
-wysoko wydajnym narzЙdziem do renderowania ascii-art. Teraz mСj Linux
-startuje z Ёadnym logo pingwina na drugim monitorze. AA-lib API jest
-zaprojektowane tak by byФ podobnym do innych graficznych bibliotek.
-Nauka nowego API bЙdzie buЁk╠ z masЁem!
+%description -l pl.UTF-8
+AA-lib jest niskopoziomowд┘ bibliotekд┘ graficznд┘ podobnie jak wiele
+innych bibliotek. Gе┌цЁwna rцЁе╪nica pomiд≥dzy nimi jest taka, е╪e AA-lib
+nie wymaga trybu graficznego. Wе┌aе⌡ciwie nie ma moе╪liwoе⌡ci wyе⌡wietlenia
+czegoе⌡ w trybie graficznym. AA-lib zastд≥puje te staromodne metody
+wysoko wydajnym narzд≥dziem do renderowania ascii-art. Teraz mцЁj Linux
+startuje z е┌adnym logo pingwina na drugim monitorze. AA-lib API jest
+zaprojektowane tak by byд┤ podobnym do innych graficznych bibliotek.
+Nauka nowego API bд≥dzie buе┌kд┘ z masе┌em!
 
-%description -l pt_BR
+%description -l pt_BR.UTF-8
 Uma biblioteca para trabalhar com ASCII art.
 
-%description -l ru
-AA-lib - это низкоуровневая графическая библиотека. Ее основное
-отличие от других графических библиотек в том, что AA-lib не требует
-графического устройства. На самом деле, графический (в обычном смысле
-этого слова) вывод и невозможен. AA-lib переводит графику в так
-называемый ASCII-Art.
+%description -l ru.UTF-8
+AA-lib - я█я┌п╬ п╫п╦п╥п╨п╬я┐я─п╬п╡п╫п╣п╡п╟я▐ пЁя─п╟я└п╦я┤п╣я│п╨п╟я▐ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╟. п∙п╣ п╬я│п╫п╬п╡п╫п╬п╣
+п╬я┌п╩п╦я┤п╦п╣ п╬я┌ п╢я─я┐пЁп╦я┘ пЁя─п╟я└п╦я┤п╣я│п╨п╦я┘ п╠п╦п╠п╩п╦п╬я┌п╣п╨ п╡ я┌п╬п╪, я┤я┌п╬ AA-lib п╫п╣ я┌я─п╣п╠я┐п╣я┌
+пЁя─п╟я└п╦я┤п╣я│п╨п╬пЁп╬ я┐я│я┌я─п╬п╧я│я┌п╡п╟. п²п╟ я│п╟п╪п╬п╪ п╢п╣п╩п╣, пЁя─п╟я└п╦я┤п╣я│п╨п╦п╧ (п╡ п╬п╠я▀я┤п╫п╬п╪ я│п╪я▀я│п╩п╣
+я█я┌п╬пЁп╬ я│п╩п╬п╡п╟) п╡я▀п╡п╬п╢ п╦ п╫п╣п╡п╬п╥п╪п╬п╤п╣п╫. AA-lib п©п╣я─п╣п╡п╬п╢п╦я┌ пЁя─п╟я└п╦п╨я┐ п╡ я┌п╟п╨
+п╫п╟п╥я▀п╡п╟п╣п╪я▀п╧ ASCII-Art.
 
-%description -l uk
-AA-lib - це низькор╕внева граф╕чна б╕бл╕отека. Головна в╕дм╕нн╕сть ╖╖
-в╕д ╕нших граф╕чних б╕бл╕отек в тому, о AA-lib не потребу╓ граф╕чного
-пристрою. Насправд╕, граф╕чний (в звичному розум╕нн╕ цього слова)
-вив╕д ╕ неможливий. AA-lib перетворю╓ граф╕ку в так званий ASCII-Art.
+%description -l uk.UTF-8
+AA-lib - я├п╣ п╫п╦п╥я▄п╨п╬я─я√п╡п╫п╣п╡п╟ пЁя─п╟я└я√я┤п╫п╟ п╠я√п╠п╩я√п╬я┌п╣п╨п╟. п⌠п╬п╩п╬п╡п╫п╟ п╡я√п╢п╪я√п╫п╫я√я│я┌я▄ я≈я≈
+п╡я√п╢ я√п╫я┬п╦я┘ пЁя─п╟я└я√я┤п╫п╦я┘ п╠я√п╠п╩я√п╬я┌п╣п╨ п╡ я┌п╬п╪я┐, п╬ AA-lib п╫п╣ п©п╬я┌я─п╣п╠я┐я■ пЁя─п╟я└я√я┤п╫п╬пЁп╬
+п©я─п╦я│я┌я─п╬я▌. п²п╟я│п©я─п╟п╡п╢я√, пЁя─п╟я└я√я┤п╫п╦п╧ (п╡ п╥п╡п╦я┤п╫п╬п╪я┐ я─п╬п╥я┐п╪я√п╫п╫я√ я├я▄п╬пЁп╬ я│п╩п╬п╡п╟)
+п╡п╦п╡я√п╢ я√ п╫п╣п╪п╬п╤п╩п╦п╡п╦п╧. AA-lib п©п╣я─п╣я┌п╡п╬я─я▌я■ пЁя─п╟я└я√п╨я┐ п╡ я┌п╟п╨ п╥п╡п╟п╫п╦п╧ ASCII-Art.
 
 %package devel
 Summary:	Header files and libraries for aalib
-Summary(pl):	Pliki nagЁСwkowe dla aalib
-Summary(ru):	Хедеры для построения программ с AAlib
-Summary(uk):	Хедери для побудови програм з AAlib
+Summary(pl.UTF-8):   Pliki nagе┌цЁwkowe dla aalib
+Summary(ru.UTF-8):   п╔п╣п╢п╣я─я▀ п╢п╩я▐ п©п╬я│я┌я─п╬п╣п╫п╦я▐ п©я─п╬пЁя─п╟п╪п╪ я│ AAlib
+Summary(uk.UTF-8):   п╔п╣п╢п╣я─п╦ п╢п╩я▐ п©п╬п╠я┐п╢п╬п╡п╦ п©я─п╬пЁя─п╟п╪ п╥ AAlib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gpm-devel
@@ -82,54 +82,54 @@ Requires:	xorg-lib-libX11-devel
 %description devel
 The header files for development of programs using the AAlib.
 
-%description devel -l pl
-Pliki nagЁСwkowe do pisania programСw u©ywaj╠cych AAlib.
+%description devel -l pl.UTF-8
+Pliki nagе┌цЁwkowe do pisania programцЁw uе╪ywajд┘cych AAlib.
 
-%description devel -l ru
-Хедеры для построения программ с AAlib.
+%description devel -l ru.UTF-8
+п╔п╣п╢п╣я─я▀ п╢п╩я▐ п©п╬я│я┌я─п╬п╣п╫п╦я▐ п©я─п╬пЁя─п╟п╪п╪ я│ AAlib.
 
-%description devel -l uk
-Хедери для побудови програм з AAlib.
+%description devel -l uk.UTF-8
+п╔п╣п╢п╣я─п╦ п╢п╩я▐ п©п╬п╠я┐п╢п╬п╡п╦ п©я─п╬пЁя─п╟п╪ п╥ AAlib.
 
 %package static
 Summary:	Static aalib library
-Summary(pl):	Statyczna biblioteka aalib
-Summary(ru):	Статическая библиотека для построения программ с aalib
-Summary(uk):	Статична б╕бл╕отека для побудови програм з aalib
+Summary(pl.UTF-8):   Statyczna biblioteka aalib
+Summary(ru.UTF-8):   п║я┌п╟я┌п╦я┤п╣я│п╨п╟я▐ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╟ п╢п╩я▐ п©п╬я│я┌я─п╬п╣п╫п╦я▐ п©я─п╬пЁя─п╟п╪п╪ я│ aalib
+Summary(uk.UTF-8):   п║я┌п╟я┌п╦я┤п╫п╟ п╠я√п╠п╩я√п╬я┌п╣п╨п╟ п╢п╩я▐ п©п╬п╠я┐п╢п╬п╡п╦ п©я─п╬пЁя─п╟п╪ п╥ aalib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static aalib library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka aalib.
 
-%description static -l ru
-Статическая библиотека для программирования с aalib.
+%description static -l ru.UTF-8
+п║я┌п╟я┌п╦я┤п╣я│п╨п╟я▐ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╟ п╢п╩я▐ п©я─п╬пЁя─п╟п╪п╪п╦я─п╬п╡п╟п╫п╦я▐ я│ aalib.
 
-%description static -l uk
-Статична б╕бл╕отека для програмування з aalib.
+%description static -l uk.UTF-8
+п║я┌п╟я┌п╦я┤п╫п╟ п╠я√п╠п╩я√п╬я┌п╣п╨п╟ п╢п╩я▐ п©я─п╬пЁя─п╟п╪я┐п╡п╟п╫п╫я▐ п╥ aalib.
 
 %package progs
 Summary:	AA-lib tools
-Summary(pl):	NarzЙdzia AA-lib
-Summary(ru):	Утилиты для AA-lib
-Summary(uk):	Утил╕ти для AA-lib
+Summary(pl.UTF-8):   Narzд≥dzia AA-lib
+Summary(ru.UTF-8):   пёя┌п╦п╩п╦я┌я▀ п╢п╩я▐ AA-lib
+Summary(uk.UTF-8):   пёя┌п╦п╩я√я┌п╦ п╢п╩я▐ AA-lib
 Group:		Applications/Terminal
 Requires:	%{name} = %{version}-%{release}
 
 %description progs
 AA-lib tools.
 
-%description progs -l pl
-NarzЙdzia AA-lib.
+%description progs -l pl.UTF-8
+Narzд≥dzia AA-lib.
 
-%description progs -l ru
-Утилиты для AA-lib.
+%description progs -l ru.UTF-8
+пёя┌п╦п╩п╦я┌я▀ п╢п╩я▐ AA-lib.
 
-%description progs -l uk
-Утил╕ти для AA-lib.
+%description progs -l uk.UTF-8
+пёя┌п╦п╩я√я┌п╦ п╢п╩я▐ AA-lib.
 
 %prep
 %setup -q -n %{name}-1.4.0
