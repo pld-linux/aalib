@@ -1,10 +1,10 @@
 Summary:	An ASCII art GFX library
-Summary(fr.UTF-8):   Bibliothèque AA (Ascii Art)
-Summary(es.UTF-8):   Biblioteca ASCII art
-Summary(pl.UTF-8):   Biblioteka graficzna ASCII Art
-Summary(pt_BR.UTF-8):   Uma biblioteca para ASCII art
-Summary(ru.UTF-8):   Библиотека консольной графики (ASCII Art)
-Summary(uk.UTF-8):   Бібліотека консольної графіки (ASCII Art)
+Summary(fr.UTF-8):	Bibliothèque AA (Ascii Art)
+Summary(es.UTF-8):	Biblioteca ASCII art
+Summary(pl.UTF-8):	Biblioteka graficzna ASCII Art
+Summary(pt_BR.UTF-8):	Uma biblioteca para ASCII art
+Summary(ru.UTF-8):	Библиотека консольной графики (ASCII Art)
+Summary(uk.UTF-8):	Бібліотека консольної графіки (ASCII Art)
 Name:		aalib
 %define         _rc     rc5
 %define         _rel    11
@@ -70,9 +70,9 @@ AA-lib - це низькорівнева графічна бібліотека. 
 
 %package devel
 Summary:	Header files and libraries for aalib
-Summary(pl.UTF-8):   Pliki nagłówkowe dla aalib
-Summary(ru.UTF-8):   Хедеры для построения программ с AAlib
-Summary(uk.UTF-8):   Хедери для побудови програм з AAlib
+Summary(pl.UTF-8):	Pliki nagłówkowe dla aalib
+Summary(ru.UTF-8):	Хедеры для построения программ с AAlib
+Summary(uk.UTF-8):	Хедери для побудови програм з AAlib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gpm-devel
@@ -93,9 +93,9 @@ Pliki nagłówkowe do pisania programów używających AAlib.
 
 %package static
 Summary:	Static aalib library
-Summary(pl.UTF-8):   Statyczna biblioteka aalib
-Summary(ru.UTF-8):   Статическая библиотека для построения программ с aalib
-Summary(uk.UTF-8):   Статична бібліотека для побудови програм з aalib
+Summary(pl.UTF-8):	Statyczna biblioteka aalib
+Summary(ru.UTF-8):	Статическая библиотека для построения программ с aalib
+Summary(uk.UTF-8):	Статична бібліотека для побудови програм з aalib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -113,9 +113,9 @@ Statyczna biblioteka aalib.
 
 %package progs
 Summary:	AA-lib tools
-Summary(pl.UTF-8):   Narzędzia AA-lib
-Summary(ru.UTF-8):   Утилиты для AA-lib
-Summary(uk.UTF-8):   Утиліти для AA-lib
+Summary(pl.UTF-8):	Narzędzia AA-lib
+Summary(ru.UTF-8):	Утилиты для AA-lib
+Summary(uk.UTF-8):	Утиліти для AA-lib
 Group:		Applications/Terminal
 Requires:	%{name} = %{version}-%{release}
 
