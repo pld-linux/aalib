@@ -74,7 +74,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe dla aalib
 Summary(ru.UTF-8):	Хедеры для построения программ с AAlib
 Summary(uk.UTF-8):	Хедери для побудови програм з AAlib
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	gpm-devel
 Requires:	slang-devel
 Requires:	xorg-lib-libX11-devel
@@ -97,7 +97,7 @@ Summary(pl.UTF-8):	Statyczna biblioteka aalib
 Summary(ru.UTF-8):	Статическая библиотека для построения программ с aalib
 Summary(uk.UTF-8):	Статична бібліотека для побудови програм з aalib
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 Static aalib library.
@@ -117,7 +117,7 @@ Summary(pl.UTF-8):	Narzędzia AA-lib
 Summary(ru.UTF-8):	Утилиты для AA-lib
 Summary(uk.UTF-8):	Утиліти для AA-lib
 Group:		Applications/Terminal
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description progs
 AA-lib tools.
