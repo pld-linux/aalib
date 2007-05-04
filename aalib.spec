@@ -19,7 +19,7 @@ Source1:	%{name}-config.1
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-debian_man.patch
 Patch2:		%{name}-am18.patch
-URL:		http://aa-project.sourceforge.net/
+URL:		http://aa-project.sourceforge.net/aalib/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gpm-devel
