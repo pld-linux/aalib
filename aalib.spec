@@ -1,3 +1,6 @@
+# Conditional build:
+%bcond_without	static_libs	# don't build static library
+#
 Summary:	An ASCII art GFX library
 Summary(fr.UTF-8):	Bibliothèque AA (Ascii Art)
 Summary(es.UTF-8):	Biblioteca ASCII art
@@ -146,7 +149,8 @@ mv -f c.tmp configure.in
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	%{!?with_static_libs:--disable-static}
 %{__make}
 
 %install
@@ -185,9 +189,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/*
 %{_aclocaldir}/*.m4
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+%endif
 
 %files progs
 %defattr(644,root,root,755)
