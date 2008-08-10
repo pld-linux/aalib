@@ -11,7 +11,7 @@ Summary(ru.UTF-8):	Библиотека консольной графики (ASC
 Summary(uk.UTF-8):	Бібліотека консольної графіки (ASCII Art)
 Name:		aalib
 %define         _rc     rc5
-%define         _rel    12
+%define         _rel    13
 Version:	1.4
 Release:	0.%{_rc}.%{_rel}
 Epoch:		1
