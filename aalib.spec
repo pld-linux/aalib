@@ -1,7 +1,9 @@
 #
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
-#
+
+%define		subver	rc5
+%define		rel		15
 Summary:	An ASCII art GFX library
 Summary(fr.UTF-8):	Bibliothèque AA (Ascii Art)
 Summary(es.UTF-8):	Biblioteca ASCII art
@@ -10,14 +12,12 @@ Summary(pt_BR.UTF-8):	Uma biblioteca para ASCII art
 Summary(ru.UTF-8):	Библиотека консольной графики (ASCII Art)
 Summary(uk.UTF-8):	Бібліотека консольної графіки (ASCII Art)
 Name:		aalib
-%define         _rc     rc5
-%define         _rel    14
 Version:	1.4
-Release:	0.%{_rc}.%{_rel}
+Release:	0.%{subver}.%{rel}
 Epoch:		1
 License:	LGPL
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/aa-project/%{name}-%{version}%{_rc}.tar.gz
+Source0:	http://downloads.sourceforge.net/aa-project/%{name}-%{version}%{subver}.tar.gz
 # Source0-md5:	9801095c42bba12edebd1902bcf0a990
 Source1:	%{name}-config.1
 Patch0:		%{name}-info.patch
@@ -136,7 +136,7 @@ Narzędzia AA-lib.
 Утиліти для AA-lib.
 
 %prep
-%setup -q -n %{name}-1.4.0
+%setup -q -n %{name}-%{version}.0
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
@@ -156,11 +156,12 @@ mv -f c.tmp configure.in
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install -D %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1/aalib-config.1
+
+%{__rm} -f $RPM_BUILD_ROOT%{_infodir}/dir
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -177,13 +178,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README NEWS AUTHORS ANNOUNCE ChangeLog
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libaa.so.*.*
+%ghost %{_libdir}/libaa.so.1
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/aalib-config
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%{_libdir}/libaa.so
+%{_libdir}/libaa.la
 %{_includedir}/*.h
 %{_infodir}/*.info*
 %{_mandir}/man1/aalib-config.1*
@@ -193,7 +195,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libaa.a
 %endif
 
 %files progs
