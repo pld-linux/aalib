@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 
 %define		subver	rc5
-%define		rel		15
+%define		rel		16
 Summary:	An ASCII art GFX library
 Summary(fr.UTF-8):	Bibliothèque AA (Ascii Art)
 Summary(es.UTF-8):	Biblioteca ASCII art

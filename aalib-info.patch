@@ -13,3 +13,28 @@ diff -urN aalib-1.2.orig/aalib.texinfo aalib-1.2/aalib.texinfo
  @end direntry
  
  
+@@ -29,11 +29,11 @@ this permission notice are preserved on all copies.
+ 
+ @titlepage
+ 
+-@title{AA-lib @value{VERSION}}
+-@subtitle{An ascii-art library}
+-@subtitle{API-DESCRIPTION}
++@title AA-lib @value{VERSION}
++@subtitle An ascii-art library
++@subtitle API-DESCRIPTION
+ 
+-@author{Jan Hubi@v cka & Kamil Toman}
++@author Jan Hubi@v cka & Kamil Toman
+ @tex
+ Dukelsk\'ych bojovn\'\i ku 1944 
+ @end tex
+@@ -1318,7 +1318,7 @@ To write new driver is quite easy. You need to implement just few very basic
+ functions (like initialization, drawing to screen etc...) and register it in
+ the driver registry. There is separate drivers for screen, mouse and keyboard.
+ 
+-@subsection Display driver
++@section Display driver
+ Display driver is the most significant driver (of course) so it is recomended
+ to implement it first. Its structure is as follows:
+ 
